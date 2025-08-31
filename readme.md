@@ -1,5 +1,8 @@
 # Anomaly Detection on Sensor Data using Docker "Models" Service, local LLM and "AI"-based anomaly detection.
 
+> [!caution]
+> Most probably. Don't do this! :-)
+
 ## Summary:
 The project is an end-to-end pipeline for attempting to detect anomalies in time-series sensor data using a Dockerized environment. It uses Docker Desktop's built-in Model Runner to process data, sent by a container with a python script to send an API request to a local LLM to analyze data and produce a response. Broadly, it's not very reliable (i.e. hallucinations, the bane of LLMs).
 
@@ -7,7 +10,9 @@ The project is an end-to-end pipeline for attempting to detect anomalies in time
 > ##### tl;dr.1: We make use of `ai/smollm2:latest` model, and [Docker Model Runner](https://docs.docker.com/ai/model-runner/api-reference/#request-from-the-host-using-tcp) as a service for the local Rest API endpoint, to access the LLM model:
 > - Initially, we assume the `data.csv` file will be populated with new sensor information before each `docker compose up` execution.
 >     - (*See `helper_data_source.py` for collecting a latest set of data from an InfluxDB table. CSV was tested. Influxdb not tested.)*
-> <img width="629" height="355" alt="image" src="https://github.com/user-attachments/assets/81f93047-8df7-44e5-968c-38501cd8a66a" />
+> - <img width="730" height="532" alt="image" src="https://github.com/user-attachments/assets/461479c2-e76d-46e1-bec0-8ade3251c1a3" />
+> - <img width="629" height="355" alt="image" src="https://github.com/user-attachments/assets/81f93047-8df7-44e5-968c-38501cd8a66a" />
+
 
 > [!warning]
 > ##### tl;dr.2: the results are odd, see `/responses/` directory.
@@ -76,6 +81,7 @@ Follow these steps to build the container and run the anomaly detection process.
 ```bash
 docker compose up --no-deps --build data-processor
 ```
+
 
 
 
