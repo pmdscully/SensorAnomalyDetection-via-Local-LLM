@@ -1,6 +1,22 @@
-## Anomaly Detection on Sensor Data using Docker "Models" Service, local LLM and "AI"-based anomaly detection.
+# Anomaly Detection on Sensor Data using Docker "Models" Service, local LLM and "AI"-based anomaly detection.
 
+## Summary:
 The project is an end-to-end pipeline for attempting to detect anomalies in time-series sensor data using a Dockerized environment. It uses Docker Desktop's built-in Model Runner to process data, sent by a container with a python script to send an API request to a local LLM to analyze data and produce a response. Broadly, it's not very reliable (i.e. hallucinations, the bane of LLMs).
+
+> [!note]
+> ##### tl;dr.1: We make use of `ai/smollm2:latest` model, and [Docker Model Runner](https://docs.docker.com/ai/model-runner/api-reference/#request-from-the-host-using-tcp) as a service for the local Rest API endpoint, to access the LLM model:
+>
+> <img width="629" height="355" alt="image" src="https://github.com/user-attachments/assets/81f93047-8df7-44e5-968c-38501cd8a66a" />
+
+> [!warning]
+> ##### tl;dr.2: the results are odd, see `/responses/` directory.
+> - "`There are 10 unusual outliers in this temperature data from an office/lab environment with a mean sensor value of 22.4 and standard deviation of 0.9.`"
+> - "`There are three unusual outliers in the provided temperature data: 22.7, 22.6, and 22.5 degrees Celsius. The temperature sensor is experiencing issues, resulting in a significant change in the readings.`"
+> - "`Unusual temperature readings indicate possible issues in the office or lab environment.`"
+
+---
+
+## How to use:
 
 ### Project Files
 
@@ -52,8 +68,12 @@ Follow these steps to build the container and run the anomaly detection process.
         3. Take top column's LLM response filename. e.g. `responses/model_response_YYYYmmdd_HHMMSS.json`
         4. Read response file as JSON.
 
-If you have changes to the Python code, run the the `docker compose up`, as follows, to ensure the change is executed, and prevent redownloading of Dockerfile packages:
-```sh
+---
+
+### Issues - Code Changes within Docker Compose:
+- If you have changes to the Python code, run the the `docker compose up`, as follows, to ensure the change is executed, and prevent redownloading of Dockerfile packages:
+```bash
 docker compose up --no-deps --build data-processor
 ```
+
 
