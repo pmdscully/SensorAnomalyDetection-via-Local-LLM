@@ -42,7 +42,7 @@ Before running this project, you must set up the `Model Runner` in Docker Deskto
     - Click `Local` tab. After downloading, the model will be available in this tab to run `>` within Docker Desktop (you can test the prompt-response here.)
 3.  **API Endpoint**: 
     - Docker Desktop exposes a single `API` endpoint for all models it runs. 
-    - The default port is **12434**. The `docker-compose.yml` is configured to use this endpoint via `http://model-runner.docker.internal:12434` or `http://localhost:12434/engines/v1/chat/completions`
+    - The default port is **12434**. The `docker-compose.yml` is configured to use this endpoint via `http://host.docker.internal:12434/engines/v1/chat/completions`
     - The endpoint accepts a JSON data object structure, in the format described at `https://docs.docker.com/ai/model-runner/api-reference/#request-from-the-host-using-tcp`.
 
 ### Build and Run
@@ -75,5 +75,6 @@ Follow these steps to build the container and run the anomaly detection process.
 ```bash
 docker compose up --no-deps --build data-processor
 ```
+
 
 
