@@ -5,7 +5,8 @@ The project is an end-to-end pipeline for attempting to detect anomalies in time
 
 > [!note]
 > ##### tl;dr.1: We make use of `ai/smollm2:latest` model, and [Docker Model Runner](https://docs.docker.com/ai/model-runner/api-reference/#request-from-the-host-using-tcp) as a service for the local Rest API endpoint, to access the LLM model:
->
+> - Initially, we assume the `data.csv` file will be populated with new sensor information before each `docker compose up` execution.
+>     - (*See `helper_data_source.py` for collecting a latest set of data from an InfluxDB table. CSV was tested. Influxdb not tested.)*
 > <img width="629" height="355" alt="image" src="https://github.com/user-attachments/assets/81f93047-8df7-44e5-968c-38501cd8a66a" />
 
 > [!warning]
@@ -75,6 +76,7 @@ Follow these steps to build the container and run the anomaly detection process.
 ```bash
 docker compose up --no-deps --build data-processor
 ```
+
 
 
 
