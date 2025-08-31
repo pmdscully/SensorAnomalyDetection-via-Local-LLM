@@ -1,6 +1,6 @@
-## Anomaly Detection Pipeline
+## Anomaly Detection on Sensor Data using Docker "Models" Service, local LLM and "AI"-based anomaly detection.
 
-This project demonstrates an end-to-end pipeline for detecting anomalies in time-series sensor data using a Dockerized environment. It uses Docker Desktop's built-in Model Runner to process data and an LLM to analyze the results.
+The project is an end-to-end pipeline for attempting to detect anomalies in time-series sensor data using a Dockerized environment. It uses Docker Desktop's built-in Model Runner to process data, sent by a container with a python script to send an API request to a local LLM to analyze data and produce a response. Broadly, it's not very reliable (i.e. hallucinations, the bane of LLMs).
 
 ### Project Files
 
@@ -56,3 +56,4 @@ If you have changes to the Python code, run the the `docker compose up`, as foll
 ```sh
 docker compose up --no-deps --build data-processor
 ```
+
