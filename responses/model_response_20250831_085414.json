@@ -1,0 +1,32 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "There are three unusual outliers in the provided temperature data: 22.7, 22.6, and 22.5 degrees Celsius. The temperature sensor is experiencing issues, resulting in a significant change in the readings."
+      }
+    }
+  ],
+  "created": 1756630454,
+  "model": "ai/smollm2",
+  "system_fingerprint": "b1-f44f793",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 49,
+    "prompt_tokens": 411,
+    "total_tokens": 460
+  },
+  "id": "chatcmpl-lsXzlM3BIgJeEZ5SQJ2ulbLxfWaBYrmH",
+  "timings": {
+    "prompt_n": 411,
+    "prompt_ms": 3464.058,
+    "prompt_per_token_ms": 8.42836496350365,
+    "prompt_per_second": 118.6469741557445,
+    "predicted_n": 49,
+    "predicted_ms": 1329.347,
+    "predicted_per_token_ms": 27.1295306122449,
+    "predicted_per_second": 36.86020279129528
+  }
+}

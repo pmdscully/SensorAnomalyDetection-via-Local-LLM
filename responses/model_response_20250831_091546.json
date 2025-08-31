@@ -1,0 +1,32 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Unusual temperature readings indicate possible issues in the office or lab environment."
+      }
+    }
+  ],
+  "created": 1756631746,
+  "model": "ai/smollm2",
+  "system_fingerprint": "b1-f44f793",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 15,
+    "prompt_tokens": 411,
+    "total_tokens": 426
+  },
+  "id": "chatcmpl-qbcJRPFAhlUrfrqMMRKgiYr3aKX8m0EQ",
+  "timings": {
+    "prompt_n": 411,
+    "prompt_ms": 3308.13,
+    "prompt_per_token_ms": 8.048978102189782,
+    "prompt_per_second": 124.23937390610405,
+    "predicted_n": 15,
+    "predicted_ms": 305.579,
+    "predicted_per_token_ms": 20.371933333333335,
+    "predicted_per_second": 49.0871427683185
+  }
+}

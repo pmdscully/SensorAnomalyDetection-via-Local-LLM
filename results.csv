@@ -1,0 +1,4 @@
+2025-08-31T08:31:51.485833,http://host.docker.internal:12434/engines/v1/chat/completions,/app/responses/model_response_20250831_083151.json
+2025-08-31T08:34:50.936212,http://host.docker.internal:12434/engines/v1/chat/completions,/app/responses/model_response_20250831_083450.json
+2025-08-31T08:54:14.899980,http://host.docker.internal:12434/engines/v1/chat/completions,/app/responses/model_response_20250831_085414.json
+2025-08-31T09:15:46.514731,http://host.docker.internal:12434/engines/v1/chat/completions,/app/responses/model_response_20250831_091546.json

@@ -1,0 +1,32 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "There are 10 unusual outliers in this temperature data from an office/lab environment with a mean sensor value of 22.4 and standard deviation of 0.9."
+      }
+    }
+  ],
+  "created": 1756629290,
+  "model": "ai/smollm2",
+  "system_fingerprint": "b1-f44f793",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 38,
+    "prompt_tokens": 411,
+    "total_tokens": 449
+  },
+  "id": "chatcmpl-yZxyGD04eg7h3ofBWEf1lLeh5z6ljAZc",
+  "timings": {
+    "prompt_n": 391,
+    "prompt_ms": 3472.192,
+    "prompt_per_token_ms": 8.880286445012787,
+    "prompt_per_second": 112.6089801485632,
+    "predicted_n": 38,
+    "predicted_ms": 1090.529,
+    "predicted_per_token_ms": 28.69813157894737,
+    "predicted_per_second": 34.84547407725975
+  }
+}
