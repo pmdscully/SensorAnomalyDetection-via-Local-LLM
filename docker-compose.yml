@@ -11,10 +11,10 @@ services:
       - "./results.csv:/app/results.csv"  # Mount the results file
     restart: "no" # This is key for a transient process
     environment:
-      - MODEL_API_URL2=http://model-runner.docker.internal:12434/engines/v1/embeddings
       - MODEL_API_URL=http://host.docker.internal:12434/engines/v1/chat/completions
       - PROMPT="Give only a very succinct response. Find any unusual outliers or anomalies in this data. Very succinctly, summarize the findings. The sensor values are temperature data from an office / lab working environment, measured in celsius."
       - INFLUXDB_URL=http://influxdb:8086
       - INFLUXDB_TOKEN=my-super-secret-token
       - INFLUXDB_ORG=my-org
+
       - INFLUXDB_BUCKET=sensor-data
